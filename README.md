@@ -383,7 +383,7 @@ Making a YouTube video, blog post, Reddit tutorial, or short about these scripts
 **Mention the creator and link back to this repo.** Put it in the description, the pinned comment, or the post itself. Something like:
 
 ```
-Scripts by Vikranth: https://github.com/YOURUSERNAME/win11-theme-scripts
+Scripts by moss: https://github.com/mosstackrn/win11-theme-scripts
 ```
 
 Ground rules:
