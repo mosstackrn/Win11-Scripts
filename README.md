@@ -1,14 +1,11 @@
 # 🎨 win11-theme-scripts
 
-> *Windows 11 shipped in blue. You wanted olive. Microsoft said "have you tried Settings?" Settings said "no." So here we are, talking to the registry directly like it's 2003.*
-
 Two small PowerShell scripts that repaint parts of Windows 11 that the Settings app sometimes refuses to touch:
 
 | Script | What it does | Needs admin? |
 |---|---|---|
 | `Set-AccentColor.ps1` | Paints your taskbar, Start menu and window title bars from **one hex code** | No |
 | `Set-LockScreen.ps1` | Forces a lock screen image through the registry | **Yes** |
-| `Reset-LockScreen.ps1` | Undoes the lock screen script. Panic button | **Yes** |
 
 **Table of contents**
 1. [Quick start (60 seconds)](#1-quick-start-60-seconds)
@@ -45,7 +42,7 @@ Two small PowerShell scripts that repaint parts of Windows 11 that the Settings 
 
 A `.ps1` file is a PowerShell script: a text file full of commands that PowerShell runs top to bottom. Windows is a bit paranoid about running them, so here are the ways in.
 
-### Step A: open PowerShell
+### Step A: Open PowerShell
 - **Normal:** press `Win`, type `PowerShell`, press Enter.
 - **Administrator** (needed for the lock screen script): press `Win + X`, then choose **Terminal (Admin)** or **Windows PowerShell (Admin)**. Click **Yes** on the prompt.
 
@@ -371,7 +368,7 @@ Registry-editing scripts sometimes trip antivirus tools because malware also edi
 - **Not every Windows panel obeys.** Parts of the UI, like some Quick Settings elements, can keep Windows' default blue even after the palette is set. Windows may read the palette only at sign-in, and some controls ignore it.
 - **Accent on taskbar/Start only works in dark mode.** Light mode ignores it. Windows decided this, not us.
 - **Taskbar and Start share one switch.** They can't be coloured separately via this method.
-- **Lock screen method is unofficial for home users.** `PersonalizationCSP` is built for managed/enterprise devices. It is documented for Pro, Enterprise and Education, and may be ignored on Home. Windows updates can change its behaviour.
+- **Lock screen method is unofficial for home users.** `PersonalizationCSP` is built for managed/enterprise devices. It is documented for Pro, Enterprise, and Education, and may be ignored on Home. Windows updates can change its behaviour.
 - **Tested on:** Windows 11 build 26200. Other builds: your mileage may vary.
 - **Windows Spotlight and "slideshow" lock screen modes** may fight the override.
 
@@ -381,7 +378,7 @@ Found a bug or a build where it fails? Open an Issue and include your Windows ve
 
 ## 9. Content creators: please credit
 
-Making a YouTube video, blog post, Reddit tutorial or short about these scripts? Awesome, genuinely. Go for it. Just do one thing:
+Making a YouTube video, blog post, Reddit tutorial, or short about these scripts? Awesome, genuinely. Go for it. Just do one thing:
 
 **Mention the creator and link back to this repo.** Put it in the description, the pinned comment, or the post itself. Something like:
 
@@ -391,7 +388,7 @@ Scripts by Vikranth: https://github.com/YOURUSERNAME/win11-theme-scripts
 
 Ground rules:
 - Crediting means naming the author **and** linking the original repo.
-- You can modify, remix and re-share under the MIT licence, but **keep the LICENSE file and copyright notice** with any copy of the code.
+- You can modify, remix, and re-share under the MIT licence, but **keep the LICENSE file and copyright notice** with any copy of the code.
 - Please don't re-upload the scripts as your own work or put them behind a paywall or "join my Discord to get the link" gate. The licence technically allows reuse, but be a decent human.
 - Tag the repo or drop a link if you make a video. Creators who credit their sources get good karma points. (The karma is imaginary, but still.)
 
@@ -399,12 +396,10 @@ Ground rules:
 
 ## 10. Credits and license
 
-- **Creator:** Vikranth, GitHub: `@YOURUSERNAME`
+- **Creator:** moss, GitHub: `@mosstackrn`
 - **Built with help from** AI assistants (ChatGPT and Claude) during development and troubleshooting. The scripts were iterated with real Windows 11 testing and error output.
 - **Not affiliated with Microsoft.** Windows is a trademark of Microsoft Corporation.
 - **License:** [MIT](LICENSE). Use it, change it, share it, keep the notice.
-
-**Disclaimer:** provided as is, with no warranty. You are responsible for what runs on your PC. Back up first, read the code, and use at your own risk.
 
 ---
 
